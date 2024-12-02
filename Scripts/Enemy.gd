@@ -5,8 +5,7 @@ extends Area2D
 func _ready():
 	pass # Replace with function body.
 
-
 func _on_body_entered(body):
 	if body.name == "MainCharacter":
 		body.Death()
-		print(body.name)
+
