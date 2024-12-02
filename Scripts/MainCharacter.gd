@@ -16,3 +16,6 @@ func _physics_process(_delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func Death():
+	print('our hero is dead')
