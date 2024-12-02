@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck1acwu03j4ca"]
+[gd_scene load_steps=7 format=3 uid="uid://ck1acwu03j4ca"]
 
 [ext_resource type="Texture2D" uid="uid://bc523knucw82s" path="res://Images/MobileTileset.png" id="2_klciq"]
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="3_py15a"]
+[ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/EndPoint.tscn" id="4_7hid3"]
 [ext_resource type="PackedScene" uid="uid://c4srxovnoowrm" path="res://Scenes/Characters/Enemy.tscn" id="4_jktbs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_368il"]
@@ -55,3 +56,6 @@ position = Vector2(127, 540)
 
 [node name="Enemy" parent="." instance=ExtResource("4_jktbs")]
 position = Vector2(414, 237)
+
+[node name="EndPoint" parent="." instance=ExtResource("4_7hid3")]
+position = Vector2(1054, 98)
