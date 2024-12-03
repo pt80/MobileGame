@@ -19,3 +19,5 @@ func _physics_process(_delta):
 
 func Death():
 	print('our hero is dead')
+	get_tree().reload_current_scene()
+

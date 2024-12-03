@@ -6,7 +6,7 @@ extends Control
 
 var LevelIndex = 0
 var LevelList: Array = []
-var LevelName
+var LevelName: String
 
 func _ready():
 	GetLevels("res://Scenes/Levels/")
@@ -24,8 +24,6 @@ func GetLevels(path):
 		print("An error occurred when trying to access the path.")
 
 func _on_button_pressed():
-	#var LevelName = LevelList[LevelIndex].left(LevelList[LevelIndex].length() - 5)
-	#
 	if LevelInfo.Metadata[LevelName]['unlocked']:
 		get_tree().change_scene_to_file("res://Scenes/Levels/" + LevelList[LevelIndex])
 	else:
@@ -48,10 +46,10 @@ func SetLevelInfo():
 	
 	level_image.texture = load(LevelInfo.Metadata[LevelName]['image'])
 	if LevelInfo.Metadata[LevelName]['unlocked'] == false:
-		level_image.modulate = Color(0.5, 0.5, 0.5, 1)
+		level_image.self_modulate = Color(0.5, 0.5, 0.5, 1)
 		unlock_image.visible = true
 	elif LevelInfo.Metadata[LevelName]['unlocked'] == true:
-		level_image.modulate = Color(1,1,1,1)
+		level_image.self_modulate = Color(1,1,1,1)
 		unlock_image.visible = false
 	
 	level_name_label.text = LevelName

@@ -11,6 +11,6 @@ var Metadata = {
 		'scene': "res://Scenes/Levels/NeilLevel.tscn",
 		'image': "res://Images/MainMenuBackground.png",
 		'high score': 0,
-		'unlocked': false
+		'unlocked': true
 	}
 }
