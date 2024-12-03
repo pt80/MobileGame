@@ -2,9 +2,11 @@ extends Control
 
 @onready var level_image = $VBoxContainer/HBoxContainer2/LevelImage
 @onready var level_name_label = $VBoxContainer/HBoxContainer/LevelNameLabel
+@onready var unlock_image = $VBoxContainer/HBoxContainer2/LevelImage/UnlockImage
 
 var LevelIndex = 0
 var LevelList: Array = []
+var LevelName
 
 func _ready():
 	GetLevels("res://Scenes/Levels/")
@@ -16,15 +18,18 @@ func GetLevels(path):
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			print("Found file: " + file_name)
 			LevelList.append(file_name)
 			file_name = dir.get_next()
 	else:
 		print("An error occurred when trying to access the path.")
-	print(LevelList)
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Levels/" + LevelList[LevelIndex])
+	#var LevelName = LevelList[LevelIndex].left(LevelList[LevelIndex].length() - 5)
+	#
+	if LevelInfo.Metadata[LevelName]['unlocked']:
+		get_tree().change_scene_to_file("res://Scenes/Levels/" + LevelList[LevelIndex])
+	else:
+		print('level is not unlocked')
 
 func _on_previous_button_pressed():
 	LevelIndex -= 1
@@ -39,7 +44,15 @@ func _on_next_button_pressed():
 	SetLevelInfo()
 
 func SetLevelInfo():
-	var LevelName =LevelList[LevelIndex].left(LevelList[LevelIndex].length() - 5)
+	LevelName = LevelList[LevelIndex].left(LevelList[LevelIndex].length() - 5)
+	
 	level_image.texture = load(LevelInfo.Metadata[LevelName]['image'])
+	if LevelInfo.Metadata[LevelName]['unlocked'] == false:
+		level_image.modulate = Color(0.5, 0.5, 0.5, 1)
+		unlock_image.visible = true
+	elif LevelInfo.Metadata[LevelName]['unlocked'] == true:
+		level_image.modulate = Color(1,1,1,1)
+		unlock_image.visible = false
+	
 	level_name_label.text = LevelName
 

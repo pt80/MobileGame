@@ -4,11 +4,13 @@ var Metadata = {
 	"DakotaLevel":{
 		'scene': "res://Scenes/Levels/DakotaLevel.tscn",
 		'image': "res://Images/LevelImage.png",
-		'high score': 0
+		'high score': 0,
+		'unlocked': true
 	},
 	"NeilLevel":{
 		'scene': "res://Scenes/Levels/NeilLevel.tscn",
 		'image': "res://Images/MainMenuBackground.png",
-		'high score': 0
+		'high score': 0,
+		'unlocked': false
 	}
 }

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://rty6a0w0qrh0"]
+[gd_scene load_steps=5 format=3 uid="uid://rty6a0w0qrh0"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_2ndif"]
 [ext_resource type="Texture2D" uid="uid://dbb704vdn6sbb" path="res://Images/MainMenuBackground.png" id="2_fkwmm"]
 [ext_resource type="Texture2D" uid="uid://dxf173ejkydvt" path="res://Images/LevelImage.png" id="3_bhcde"]
+[ext_resource type="Texture2D" uid="uid://diiur7b2c5tiy" path="res://Images/Lock.png" id="4_142b3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -57,6 +58,22 @@ text = "<"
 [node name="LevelImage" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 texture = ExtResource("3_bhcde")
+
+[node name="UnlockImage" type="TextureRect" parent="VBoxContainer/HBoxContainer2/LevelImage"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_142b3")
 
 [node name="NextButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
