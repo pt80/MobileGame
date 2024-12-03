@@ -16,8 +16,14 @@ func GetLevels(path):
 	else:
 		print("An error occurred when trying to access the path.")
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Levels/DakotaLevel.tscn")
+
+func _on_previous_button_pressed():
+	pass # Replace with function body.
+
+func _on_next_button_pressed():
+	pass # Replace with function body.
