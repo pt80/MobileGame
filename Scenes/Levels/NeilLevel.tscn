@@ -53,6 +53,7 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0
 
 [node name="MainCharacter" parent="." instance=ExtResource("3_py15a")]
 position = Vector2(74, 104)
+scale = Vector2(0.25, 0.25)
 
 [node name="Enemy" parent="." instance=ExtResource("4_jktbs")]
 position = Vector2(217, 74)
