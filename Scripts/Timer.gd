@@ -19,5 +19,4 @@ func _process(delta):
 	minutesLabel.text = "%02d" % minutes
 	secondsLabel.text = "%02d" % seconds
 	milisecondsLabel.text = "%02d" % milliseconds
-	
-	print(time)
+

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="3_py15a"]
 [ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/EndPoint.tscn" id="4_7hid3"]
 [ext_resource type="PackedScene" uid="uid://c4srxovnoowrm" path="res://Scenes/Characters/Enemy.tscn" id="4_jktbs"]
-[ext_resource type="Script" path="res://Scenes/Levels/Timer.gd" id="5_djoeo"]
+[ext_resource type="Script" path="res://Scripts/Timer.gd" id="5_djoeo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_368il"]
 texture = ExtResource("2_klciq")
@@ -43,7 +43,7 @@ margins = Vector2i(4, 0)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_368il")
 
-[node name="Node2D" type="Node2D"]
+[node name="NeilLevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

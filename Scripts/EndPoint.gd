@@ -1,10 +1,12 @@
 extends Area2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+@onready var timer = $"../../Timer"
 
 func _on_body_entered(body):
 	if body.name == "MainCharacter":
+		timer.set_process(false)
+		print(timer.time)
 		print('level complete')
+		if LevelInfo.Metadata[get_tree().current_scene.name]['high score'] > timer.time:
+			LevelInfo.Metadata[get_tree().current_scene.name]['high score'] = timer.time
+			print('new high score')
