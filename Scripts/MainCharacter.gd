@@ -14,10 +14,11 @@ func _physics_process(_delta):
 		velocity.x = HorizontalDirection * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		
 	move_and_slide()
 
 func Death():
 	print('our hero is dead')
-	get_tree().reload_current_scene()
+	global_position = Vector2i(30,30)
+
 
