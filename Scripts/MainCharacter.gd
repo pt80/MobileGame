@@ -14,7 +14,7 @@ func _physics_process(_delta):
 		velocity.x = HorizontalDirection * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
+
 	move_and_slide()
 
 func Death():

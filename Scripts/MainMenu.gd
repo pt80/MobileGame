@@ -4,23 +4,8 @@ extends Control
 @onready var level_name_label = $VBoxContainer/HBoxContainer/LevelNameLabel
 @onready var unlock_image = $VBoxContainer/HBoxContainer2/LevelImage/UnlockImage
 
-var LevelIndex = 0
-var LevelList: Array = []
-
 func _ready():
-	#GetLevels("res://Scenes/Levels/")
 	SetLevelInfo()
-
-#func GetLevels(path):
-	#var dir = DirAccess.open(path)
-	#if dir:
-		#dir.list_dir_begin()
-		#var file_name = dir.get_next()
-		#while file_name != "":
-			#LevelList.append(file_name)
-			#file_name = dir.get_next()
-	#else:
-		#print("An error occurred when trying to access the path.")
 
 func _on_button_pressed():
 	if LevelInfo.Metadata[LevelInfo.CurrentLevel]['unlocked']:
