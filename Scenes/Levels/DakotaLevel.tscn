@@ -1,7 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpeicaufp18jp"]
+[gd_scene load_steps=5 format=3 uid="uid://cpeicaufp18jp"]
 
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="1_lt36u"]
+[ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/EndPoint.tscn" id="2_14gpo"]
+[ext_resource type="PackedScene" uid="uid://dtyew16xpmshm" path="res://Scenes/TileMap.tscn" id="2_s0fub"]
+[ext_resource type="PackedScene" uid="uid://bxxibfs63rraq" path="res://Scenes/timer.tscn" id="4_qktto"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="MainCharacter" parent="." instance=ExtResource("1_lt36u")]
+[node name="Timer" parent="." instance=ExtResource("4_qktto")]
+
+[node name="TileMap" parent="." instance=ExtResource("2_s0fub")]
+
+[node name="MainCharacter" parent="TileMap" instance=ExtResource("1_lt36u")]
+position = Vector2(31, 35)
+
+[node name="EndPoint" parent="TileMap" instance=ExtResource("2_14gpo")]
+position = Vector2(248, 135)

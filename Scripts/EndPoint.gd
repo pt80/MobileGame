@@ -11,6 +11,7 @@ func _on_body_entered(body):
 		if LevelInfo.Metadata[LevelInfo.CurrentLevel]['high score'] > timer.time:
 			LevelInfo.Metadata[LevelInfo.CurrentLevel]['high score'] = timer.time
 			print('new high score')
+		get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
 
 func UnlockNextLevel():
 	if LevelInfo.CurrentLevel < LevelInfo.Metadata.size() - 1:
