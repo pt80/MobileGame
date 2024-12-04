@@ -19,6 +19,6 @@ func _physics_process(_delta):
 
 func Death():
 	print('our hero is dead')
-	global_position = Vector2i(30,30)
+	global_position = Vector2i(40,80)
 
 

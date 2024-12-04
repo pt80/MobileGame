@@ -1,16 +1,18 @@
 extends Node
 
-var Metadata = {
-	"DakotaLevel":{
-		'scene': "res://Scenes/Levels/DakotaLevel.tscn",
-		'image': "res://Images/LevelImage.png",
-		'high score': 9999,
-		'unlocked': true
+var CurrentLevel = 0
+
+var Metadata = [
+	{'name': "DakotaLevel",
+	'scene': "res://Scenes/Levels/DakotaLevel.tscn",
+	'image': "res://Images/LevelImage.png",
+	'high score': 9999,
+	'unlocked': true
 	},
-	"NeilLevel":{
+	{'name': "NeilLevel",
 		'scene': "res://Scenes/Levels/NeilLevel.tscn",
 		'image': "res://Images/MainMenuBackground.png",
 		'high score': 9999,
 		'unlocked': true
 	}
-}
+]
