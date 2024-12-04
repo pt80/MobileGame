@@ -20,7 +20,7 @@ LevelInfo="*res://Scripts/LevelInfo.gd"
 
 [display]
 
-window/size/viewport_width=270
+window/size/viewport_width=375
 window/size/viewport_height=600
 
 [input]
