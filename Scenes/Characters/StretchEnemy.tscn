@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjbs2hjsa78wg"]
 
-[ext_resource type="Script" path="res://StretchEnemy.gd" id="1_k6i8i"]
+[ext_resource type="Script" path="res://Scripts/Characters/StretchEnemy.gd" id="1_rrrtf"]
 [ext_resource type="Texture2D" uid="uid://ccyssvrlkofb0" path="res://Images/ExtendorEnemy.png" id="2_oprqn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cic2f"]
@@ -10,7 +10,7 @@ size = Vector2(14, 14)
 size = Vector2(16, 16)
 
 [node name="StretchEnemy" type="CharacterBody2D"]
-script = ExtResource("1_k6i8i")
+script = ExtResource("1_rrrtf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_oprqn")

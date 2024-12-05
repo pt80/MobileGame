@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4srxovnoowrm"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_nubdq"]
+[ext_resource type="Script" path="res://Scripts/Characters/Enemy.gd" id="1_hj7tp"]
 [ext_resource type="Texture2D" uid="uid://ctmwf553sme3q" path="res://Images/enemy.png" id="2_us30l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ucwi4"]
@@ -11,7 +11,7 @@ radius = 11.1803
 
 [node name="Enemy" type="CharacterBody2D"]
 collision_mask = 3
-script = ExtResource("1_nubdq")
+script = ExtResource("1_hj7tp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)

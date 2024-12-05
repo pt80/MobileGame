@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvxpgcsmxdimr"]
 
-[ext_resource type="Script" path="res://Scripts/MainCharacter.gd" id="1_jgkmw"]
+[ext_resource type="Script" path="res://Scripts/Characters/MainCharacter.gd" id="1_xhmj6"]
 [ext_resource type="Texture2D" uid="uid://daw7wvkl5dano" path="res://Images/MainCharacter.png" id="2_1xhgf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t74o6"]
@@ -10,7 +10,7 @@ radius = 31.0
 scale = Vector2(0.25, 0.25)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("1_jgkmw")
+script = ExtResource("1_xhmj6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_1xhgf")
