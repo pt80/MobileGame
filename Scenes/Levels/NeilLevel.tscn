@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ck1acwu03j4ca"]
+[gd_scene load_steps=7 format=3 uid="uid://ck1acwu03j4ca"]
 
 [ext_resource type="PackedScene" uid="uid://dtyew16xpmshm" path="res://Scenes/TileMap.tscn" id="2_pj4t5"]
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="3_py15a"]
 [ext_resource type="PackedScene" uid="uid://bxxibfs63rraq" path="res://Scenes/timer.tscn" id="4_6vhb3"]
 [ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/EndPoint.tscn" id="4_7hid3"]
 [ext_resource type="PackedScene" uid="uid://c4srxovnoowrm" path="res://Scenes/Characters/Enemy.tscn" id="4_jktbs"]
+[ext_resource type="PackedScene" uid="uid://bjbs2hjsa78wg" path="res://Scenes/Characters/StretchEnemy.tscn" id="6_x2in8"]
 
 [node name="NeilLevel" type="Node2D"]
 
@@ -23,3 +24,6 @@ position = Vector2(180, 119)
 
 [node name="Enemy" parent="TileMap" instance=ExtResource("4_jktbs")]
 position = Vector2(210, 63)
+
+[node name="StretchEnemy" parent="TileMap" instance=ExtResource("6_x2in8")]
+position = Vector2(144, 63)
