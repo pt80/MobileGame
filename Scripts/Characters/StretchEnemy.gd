@@ -6,11 +6,7 @@ extends CharacterBody2D
 var actionable = true
 
 func _ready():
-	var StretchTween = create_tween()
-	StretchTween.tween_property(self,"scale", Vector2(1,4),Rate)
-	StretchTween.tween_property(self,"scale", Vector2(1,1),Rate)
-	StretchTween.tween_property(self,"scale", Vector2(4,1),Rate)
-	StretchTween.tween_property(self,"scale", Vector2(1,1),Rate)
+	Stretch()
 
 func _on_area_2d_body_entered(body):
 	if body.name == "MainCharacter":
@@ -18,9 +14,11 @@ func _on_area_2d_body_entered(body):
 
 
 func _on_timer_timeout():
-	print('stretch')
-	#var StretchTween = create_tween()
-	#StretchTween.tween_property(self,"scale", Vector2(1,4),Rate)
-	#StretchTween.tween_property(self,"scale", Vector2(1,1),Rate)
-	#StretchTween.tween_property(self,"scale", Vector2(4,1),Rate)
-	#StretchTween.tween_property(self,"scale", Vector2(1,1),Rate)
+	Stretch()
+
+func Stretch():
+	var StretchTween = create_tween()
+	StretchTween.tween_property(self,"scale", Vector2(1,4),Rate)
+	StretchTween.tween_property(self,"scale", Vector2(1,1),Rate)
+	StretchTween.tween_property(self,"scale", Vector2(4,1),Rate)
+	StretchTween.tween_property(self,"scale", Vector2(1,1),Rate)
