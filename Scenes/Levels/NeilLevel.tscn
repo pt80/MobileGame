@@ -14,17 +14,20 @@
 [node name="TileMap" parent="." instance=ExtResource("2_pj4t5")]
 
 [node name="MainCharacter" parent="TileMap" instance=ExtResource("3_py15a")]
-position = Vector2(67, 93)
+position = Vector2(27, 31)
 
 [node name="EndPoint" parent="TileMap" instance=ExtResource("4_7hid3")]
 position = Vector2(262, 26)
 
 [node name="Enemy2" parent="TileMap" instance=ExtResource("4_jktbs")]
-position = Vector2(180, 119)
+position = Vector2(138, 128)
 
 [node name="Enemy" parent="TileMap" instance=ExtResource("4_jktbs")]
-position = Vector2(210, 63)
+position = Vector2(136, 84)
 
 [node name="StretchEnemy" parent="TileMap" instance=ExtResource("6_x2in8")]
-position = Vector2(144, 63)
+position = Vector2(203, 65)
 StretchHorizontal = false
+
+[node name="StretchEnemy2" parent="TileMap" instance=ExtResource("6_x2in8")]
+position = Vector2(59, 64)
