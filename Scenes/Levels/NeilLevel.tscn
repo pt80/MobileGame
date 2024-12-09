@@ -27,3 +27,4 @@ position = Vector2(210, 63)
 
 [node name="StretchEnemy" parent="TileMap" instance=ExtResource("6_x2in8")]
 position = Vector2(144, 63)
+StretchHorizontal = false
