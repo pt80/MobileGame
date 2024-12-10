@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const Speed = 200
 @export var VelocityDirection: int = 1
+@export var Speed: int = 200
 
 func _physics_process(_delta):
 	velocity.x =  VelocityDirection * Speed
