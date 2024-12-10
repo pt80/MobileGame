@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dtyew16xpmshm" path="res://Scenes/TileMap.tscn" id="2_s0fub"]
 [ext_resource type="PackedScene" uid="uid://bxxibfs63rraq" path="res://Scenes/timer.tscn" id="4_qktto"]
 
-[node name="Node2D" type="Node2D"]
+[node name="DakotaLevel" type="Node2D"]
 
 [node name="Timer" parent="." instance=ExtResource("4_qktto")]
 

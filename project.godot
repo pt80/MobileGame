@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.2", "Mobile")
 [autoload]
 
 LevelInfo="*res://Scripts/LevelInfo.gd"
+Music="*res://Scenes/music.tscn"
 
 [display]
 

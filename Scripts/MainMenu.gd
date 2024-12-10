@@ -5,6 +5,7 @@ extends Control
 @onready var unlock_image = $VBoxContainer/HBoxContainer2/LevelImage/UnlockImage
 
 func _ready():
+	Music.PlayLevelMusic()
 	SetLevelInfo()
 
 func _on_button_pressed():
