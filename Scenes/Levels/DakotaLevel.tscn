@@ -7,8 +7,6 @@
 
 [node name="DakotaLevel" type="Node2D"]
 
-[node name="Timer" parent="." instance=ExtResource("4_qktto")]
-
 [node name="TileMap" parent="." instance=ExtResource("2_s0fub")]
 
 [node name="MainCharacter" parent="TileMap" instance=ExtResource("1_lt36u")]
@@ -16,3 +14,10 @@ position = Vector2(31, 35)
 
 [node name="EndPoint" parent="TileMap" instance=ExtResource("2_14gpo")]
 position = Vector2(248, 135)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Timer" parent="HBoxContainer" instance=ExtResource("4_qktto")]
+layout_mode = 2

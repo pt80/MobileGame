@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ck1acwu03j4ca"]
+[gd_scene load_steps=9 format=3 uid="uid://ck1acwu03j4ca"]
 
 [ext_resource type="PackedScene" uid="uid://dtyew16xpmshm" path="res://Scenes/TileMap.tscn" id="2_pj4t5"]
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="3_py15a"]
@@ -6,28 +6,55 @@
 [ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/EndPoint.tscn" id="4_7hid3"]
 [ext_resource type="PackedScene" uid="uid://c4srxovnoowrm" path="res://Scenes/Characters/Enemy.tscn" id="4_jktbs"]
 [ext_resource type="PackedScene" uid="uid://bjbs2hjsa78wg" path="res://Scenes/Characters/StretchEnemy.tscn" id="6_x2in8"]
+[ext_resource type="Texture2D" uid="uid://ccyssvrlkofb0" path="res://Images/ExtendorEnemy.png" id="7_jn4mk"]
+[ext_resource type="Script" path="res://Scripts/PBText.gd" id="8_sldsg"]
 
 [node name="NeilLevel" type="Node2D"]
 
-[node name="Timer" parent="." instance=ExtResource("4_6vhb3")]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(289.43, 0)
+offset_right = 289.43
+offset_bottom = 23.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
 
-[node name="TileMap" parent="." instance=ExtResource("2_pj4t5")]
+[node name="TileMap" parent="VBoxContainer" instance=ExtResource("2_pj4t5")]
 
-[node name="MainCharacter" parent="TileMap" instance=ExtResource("3_py15a")]
+[node name="MainCharacter" parent="VBoxContainer/TileMap" instance=ExtResource("3_py15a")]
 position = Vector2(27, 31)
 
-[node name="EndPoint" parent="TileMap" instance=ExtResource("4_7hid3")]
+[node name="EndPoint" parent="VBoxContainer/TileMap" instance=ExtResource("4_7hid3")]
 position = Vector2(262, 26)
 
-[node name="Enemy2" parent="TileMap" instance=ExtResource("4_jktbs")]
+[node name="Enemy2" parent="VBoxContainer/TileMap" instance=ExtResource("4_jktbs")]
 position = Vector2(138, 128)
 
-[node name="Enemy" parent="TileMap" instance=ExtResource("4_jktbs")]
+[node name="Enemy" parent="VBoxContainer/TileMap" instance=ExtResource("4_jktbs")]
 position = Vector2(136, 84)
 
-[node name="StretchEnemy" parent="TileMap" instance=ExtResource("6_x2in8")]
+[node name="StretchEnemy" parent="VBoxContainer/TileMap" instance=ExtResource("6_x2in8")]
 position = Vector2(203, 65)
 StretchHorizontal = false
 
-[node name="StretchEnemy2" parent="TileMap" instance=ExtResource("6_x2in8")]
+[node name="StretchEnemy2" parent="VBoxContainer/TileMap" instance=ExtResource("6_x2in8")]
 position = Vector2(59, 64)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Timer" parent="VBoxContainer/HBoxContainer" instance=ExtResource("4_6vhb3")]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("7_jn4mk")
+
+[node name="PBText" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PB --:--:--"
+script = ExtResource("8_sldsg")
