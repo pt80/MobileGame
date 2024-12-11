@@ -1,8 +1,9 @@
-extends Node
+extends Resource
+class_name LevelData
 
-var CurrentLevel = 0
+@export var CurrentLevel = 0
 
-var Metadata = [
+@export var Metadata = [
 	{
 		'name': "DakotaLevel",
 		'scene': "res://Scenes/Levels/DakotaLevel.tscn",
@@ -15,6 +16,6 @@ var Metadata = [
 		'scene': "res://Scenes/Levels/NeilLevel.tscn",
 		'image': "res://Images/MainMenuBackground.png",
 		'high score': 9999,
-		'unlocked': true
+		'unlocked': false
 	}
 ]

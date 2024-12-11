@@ -19,6 +19,7 @@ func _physics_process(_delta):
 
 func Death():
 	print('our hero is dead')
+	AudioManager.PlaySoundEffect(load("res://Audio/pickup.wav"))
 	global_position = Vector2i(40,80)
 
 

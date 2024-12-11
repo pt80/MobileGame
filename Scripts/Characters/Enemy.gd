@@ -8,6 +8,8 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func _on_area_2d_body_entered(body):
+	$AudioStreamPlayer2D.stream = load("res://Audio/SFX/hit.wav")
+	$AudioStreamPlayer2D.play()
 	if body.name == "MainCharacter":
 		body.Death()
 	else:

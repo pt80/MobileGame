@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.2", "Mobile")
 
 [autoload]
 
-LevelInfo="*res://Scripts/LevelInfo.gd"
+SaveManager="*res://Scripts/Autoloads/SaveManager.gd"
 AudioManager="*res://Scenes/AudioManager.tscn"
 
 [display]
