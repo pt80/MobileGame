@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://ck1acwu03j4ca"]
+[gd_scene load_steps=12 format=3 uid="uid://ck1acwu03j4ca"]
 
 [ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="1_h81be"]
 [ext_resource type="Script" path="res://Scenes/Levels/NeilLevel.gd" id="1_ytnj0"]
 [ext_resource type="PackedScene" uid="uid://dtyew16xpmshm" path="res://Scenes/TileMap.tscn" id="2_pj4t5"]
+[ext_resource type="Texture2D" uid="uid://3jhhneh55vrw" path="res://Images/MusicNote.png" id="3_5cpri"]
+[ext_resource type="Texture2D" uid="uid://j78yab0gqgtx" path="res://Images/BackArrow.png" id="3_55lgg"]
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="3_py15a"]
 [ext_resource type="PackedScene" uid="uid://bxxibfs63rraq" path="res://Scenes/timer.tscn" id="4_6vhb3"]
 [ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/EndPoint.tscn" id="4_7hid3"]
@@ -16,9 +18,9 @@ script = ExtResource("1_ytnj0")
 [node name="VBoxContainer" type="PanelContainer" parent="."]
 texture_filter = 1
 custom_minimum_size = Vector2(307.625, 600)
-offset_right = 307.625
+offset_right = 374.0
 offset_bottom = 600.0
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource("1_h81be")
 
@@ -33,12 +35,28 @@ text = "Neils level.exe"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="Sound" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="BackButton" type="TextureButton" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
-text = "Sound
-"
+size_flags_horizontal = 2
+texture_normal = ExtResource("3_55lgg")
+
+[node name="Timer" parent="VBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource("4_6vhb3")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="PBText" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PB --:--:--"
+script = ExtResource("8_sldsg")
+
+[node name="Sound" type="TextureButton" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("3_5cpri")
 
 [node name="VolumeSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
 visible = false
@@ -72,18 +90,5 @@ StretchHorizontal = false
 [node name="StretchEnemy2" parent="VBoxContainer/TileMap" instance=ExtResource("6_x2in8")]
 position = Vector2(59, 64)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Timer" parent="VBoxContainer/HBoxContainer" instance=ExtResource("4_6vhb3")]
-layout_mode = 2
-
-[node name="PBText" type="Label" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "PB --:--:--"
-script = ExtResource("8_sldsg")
-
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer/Sound" to="." method="_on_sound_pressed"]

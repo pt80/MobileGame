@@ -17,3 +17,7 @@ func _on_sound_pressed():
 		StretchTween.tween_property(UI.get_stylebox('panel', 'PanelContainer'),"texture_margin_top", 0,1.5)
 		await StretchTween.finished
 		volume_slider.visible = true
+
+
+func _on_back_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
