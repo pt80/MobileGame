@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://c6og6s6f5eqrn"]
+
+[ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="1_7vafv"]
+[ext_resource type="Texture2D" uid="uid://j78yab0gqgtx" path="res://Images/BackArrow.png" id="2_heins"]
+[ext_resource type="Script" path="res://Scenes/BackButton.gd" id="3_fnmtd"]
+[ext_resource type="PackedScene" uid="uid://bxxibfs63rraq" path="res://Scenes/timer.tscn" id="3_wtdxo"]
+[ext_resource type="Script" path="res://Scripts/PBText.gd" id="4_vcdpw"]
+[ext_resource type="Texture2D" uid="uid://3jhhneh55vrw" path="res://Images/MusicNote.png" id="5_nwnc3"]
+[ext_resource type="Script" path="res://Scripts/SoundButton.gd" id="7_824px"]
+[ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="8_8yp7h"]
+
+[node name="Overlay" type="PanelContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(307.625, 600)
+offset_right = 374.0
+offset_bottom = 600.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("1_7vafv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="LevelNameText" type="Label" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Neils level.exe"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+texture_normal = ExtResource("2_heins")
+script = ExtResource("3_fnmtd")
+
+[node name="Timer" parent="VBoxContainer/HBoxContainer" instance=ExtResource("3_wtdxo")]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="PBText" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PB --:--:--"
+script = ExtResource("4_vcdpw")
+
+[node name="Sound" type="TextureButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("5_nwnc3")
+script = ExtResource("7_824px")
+
+[node name="VolumeSlider" type="HSlider" parent="VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(163.915, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+value = 1.0
+tick_count = 1
+script = ExtResource("8_8yp7h")
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/BackButton" to="VBoxContainer/HBoxContainer/BackButton" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Sound" to="VBoxContainer/HBoxContainer/Sound" method="_on_pressed"]
+[connection signal="drag_ended" from="VBoxContainer/HBoxContainer/VolumeSlider" to="VBoxContainer/HBoxContainer/VolumeSlider" method="_on_drag_ended"]

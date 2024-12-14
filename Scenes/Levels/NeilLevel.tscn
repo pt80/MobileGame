@@ -1,94 +1,40 @@
-[gd_scene load_steps=12 format=3 uid="uid://ck1acwu03j4ca"]
+[gd_scene load_steps=9 format=3 uid="uid://ck1acwu03j4ca"]
 
-[ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="1_h81be"]
 [ext_resource type="Script" path="res://Scenes/Levels/NeilLevel.gd" id="1_ytnj0"]
+[ext_resource type="PackedScene" uid="uid://c6og6s6f5eqrn" path="res://Scenes/Overlay.tscn" id="2_mxlvk"]
 [ext_resource type="PackedScene" uid="uid://dtyew16xpmshm" path="res://Scenes/TileMap.tscn" id="2_pj4t5"]
-[ext_resource type="Texture2D" uid="uid://3jhhneh55vrw" path="res://Images/MusicNote.png" id="3_5cpri"]
-[ext_resource type="Texture2D" uid="uid://j78yab0gqgtx" path="res://Images/BackArrow.png" id="3_55lgg"]
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="3_py15a"]
-[ext_resource type="PackedScene" uid="uid://bxxibfs63rraq" path="res://Scenes/timer.tscn" id="4_6vhb3"]
 [ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/EndPoint.tscn" id="4_7hid3"]
 [ext_resource type="PackedScene" uid="uid://c4srxovnoowrm" path="res://Scenes/Characters/Enemy.tscn" id="4_jktbs"]
 [ext_resource type="PackedScene" uid="uid://bjbs2hjsa78wg" path="res://Scenes/Characters/StretchEnemy.tscn" id="6_x2in8"]
-[ext_resource type="Script" path="res://Scripts/PBText.gd" id="8_sldsg"]
+[ext_resource type="PackedScene" uid="uid://d0ofh62ocevur" path="res://Scenes/StartPoint.tscn" id="8_dv10a"]
 
 [node name="NeilLevel" type="Node2D"]
 script = ExtResource("1_ytnj0")
 
-[node name="VBoxContainer" type="PanelContainer" parent="."]
-texture_filter = 1
-custom_minimum_size = Vector2(307.625, 600)
-offset_right = 374.0
-offset_bottom = 600.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme = ExtResource("1_h81be")
+[node name="Overlay" parent="." instance=ExtResource("2_mxlvk")]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="LevelNameText" type="Label" parent="VBoxContainer/VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Neils level.exe"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="BackButton" type="TextureButton" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 2
-texture_normal = ExtResource("3_55lgg")
-
-[node name="Timer" parent="VBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource("4_6vhb3")]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[node name="PBText" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "PB --:--:--"
-script = ExtResource("8_sldsg")
-
-[node name="Sound" type="TextureButton" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 10
-texture_normal = ExtResource("3_5cpri")
-
-[node name="VolumeSlider" type="HSlider" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(163.915, 0)
-layout_mode = 2
-size_flags_vertical = 4
-max_value = 1.0
-step = 0.001
-value = 1.0
-tick_count = 1
-
-[node name="TileMap" parent="VBoxContainer" instance=ExtResource("2_pj4t5")]
+[node name="TileMap" parent="." instance=ExtResource("2_pj4t5")]
 position = Vector2(4, 125)
 
-[node name="MainCharacter" parent="VBoxContainer/TileMap" instance=ExtResource("3_py15a")]
+[node name="StartPoint" parent="TileMap" instance=ExtResource("8_dv10a")]
+position = Vector2(27, 29)
+
+[node name="MainCharacter" parent="TileMap" instance=ExtResource("3_py15a")]
 position = Vector2(27, 31)
 
-[node name="EndPoint" parent="VBoxContainer/TileMap" instance=ExtResource("4_7hid3")]
+[node name="EndPoint" parent="TileMap" instance=ExtResource("4_7hid3")]
 position = Vector2(262, 26)
 
-[node name="Enemy2" parent="VBoxContainer/TileMap" instance=ExtResource("4_jktbs")]
+[node name="Enemy2" parent="TileMap" instance=ExtResource("4_jktbs")]
 position = Vector2(138, 128)
 
-[node name="Enemy" parent="VBoxContainer/TileMap" instance=ExtResource("4_jktbs")]
+[node name="Enemy" parent="TileMap" instance=ExtResource("4_jktbs")]
 position = Vector2(136, 84)
 
-[node name="StretchEnemy" parent="VBoxContainer/TileMap" instance=ExtResource("6_x2in8")]
+[node name="StretchEnemy" parent="TileMap" instance=ExtResource("6_x2in8")]
 position = Vector2(203, 65)
 StretchHorizontal = false
 
-[node name="StretchEnemy2" parent="VBoxContainer/TileMap" instance=ExtResource("6_x2in8")]
+[node name="StretchEnemy2" parent="TileMap" instance=ExtResource("6_x2in8")]
 position = Vector2(59, 64)
-
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/VBoxContainer/HBoxContainer/Sound" to="." method="_on_sound_pressed"]

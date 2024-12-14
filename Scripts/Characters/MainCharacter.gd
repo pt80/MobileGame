@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
+@onready var start_point = $"../StartPoint"
 
 func _physics_process(_delta):
 	var VerticalDirection = Input.get_axis("up", "down")
@@ -19,7 +20,7 @@ func _physics_process(_delta):
 
 func Death():
 	print('our hero is dead')
-	AudioManager.PlaySoundEffect(load("res://Audio/pickup.wav"))
-	global_position = Vector2i(40,80)
+	AudioManager.PlaySoundEffect(load("res://Audio/SFX/snare.wav"))
+	global_position = start_point.global_position
 
 

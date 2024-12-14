@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var timer = $"../../HBoxContainer/Timer"
+@onready var timer = $"../../Overlay/VBoxContainer/HBoxContainer/Timer"
 
 func _on_body_entered(body):
 	if body.name == "MainCharacter":
