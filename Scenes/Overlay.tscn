@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c6og6s6f5eqrn"]
+[gd_scene load_steps=10 format=3 uid="uid://c6og6s6f5eqrn"]
 
 [ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="1_7vafv"]
 [ext_resource type="Texture2D" uid="uid://j78yab0gqgtx" path="res://Images/BackArrow.png" id="2_heins"]
+[ext_resource type="Script" path="res://Scenes/LevelNameText.gd" id="2_qbhmv"]
 [ext_resource type="Script" path="res://Scenes/BackButton.gd" id="3_fnmtd"]
 [ext_resource type="PackedScene" uid="uid://bxxibfs63rraq" path="res://Scenes/timer.tscn" id="3_wtdxo"]
 [ext_resource type="Script" path="res://Scripts/PBText.gd" id="4_vcdpw"]
@@ -26,6 +27,7 @@ texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Neils level.exe"
+script = ExtResource("2_qbhmv")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
