@@ -27,14 +27,14 @@ position = Vector2(27, 31)
 position = Vector2(262, 26)
 
 [node name="Enemy2" parent="TileMap" instance=ExtResource("4_jktbs")]
-position = Vector2(138, 128)
+position = Vector2(33, 97)
 
 [node name="Enemy" parent="TileMap" instance=ExtResource("4_jktbs")]
-position = Vector2(136, 84)
+position = Vector2(56, 131)
 
 [node name="StretchEnemy" parent="TileMap" instance=ExtResource("6_x2in8")]
-position = Vector2(203, 65)
+position = Vector2(199, 72)
 StretchHorizontal = false
 
 [node name="StretchEnemy2" parent="TileMap" instance=ExtResource("6_x2in8")]
-position = Vector2(59, 64)
+position = Vector2(183, 72)

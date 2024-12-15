@@ -12,5 +12,4 @@ func _on_area_2d_body_entered(body):
 	$AudioStreamPlayer2D.play()
 	if body.name == "MainCharacter":
 		body.Death()
-	else:
-		VelocityDirection *= -1
+	VelocityDirection *= -1

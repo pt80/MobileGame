@@ -1,11 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpeicaufp18jp"]
 
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="1_lt36u"]
+[ext_resource type="PackedScene" uid="uid://c6og6s6f5eqrn" path="res://Scenes/Overlay.tscn" id="1_tgctf"]
 [ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/EndPoint.tscn" id="2_14gpo"]
 [ext_resource type="PackedScene" uid="uid://dtyew16xpmshm" path="res://Scenes/TileMap.tscn" id="2_s0fub"]
-[ext_resource type="PackedScene" uid="uid://bxxibfs63rraq" path="res://Scenes/timer.tscn" id="4_qktto"]
 
 [node name="DakotaLevel" type="Node2D"]
+
+[node name="Overlay" parent="." instance=ExtResource("1_tgctf")]
 
 [node name="TileMap" parent="." instance=ExtResource("2_s0fub")]
 
@@ -14,10 +16,3 @@ position = Vector2(31, 35)
 
 [node name="EndPoint" parent="TileMap" instance=ExtResource("2_14gpo")]
 position = Vector2(248, 135)
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Timer" parent="HBoxContainer" instance=ExtResource("4_qktto")]
-layout_mode = 2

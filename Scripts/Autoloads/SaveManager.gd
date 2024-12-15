@@ -18,6 +18,5 @@ func Save():
 func Load():
 	if FileAccess.file_exists(SaveFilePath + SaveFileName):
 		SaveFile = ResourceLoader.load(SaveFilePath + SaveFileName).duplicate(true)
-		print(SaveFile.Metadata)
 	else:
 		Save()
