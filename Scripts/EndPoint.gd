@@ -17,6 +17,8 @@ func _on_body_entered(body):
 		elif GameManager.ChallengeMode:
 			print('keep going')
 			GameManager.PlayNextChallengeLevel()
+			if SaveManager.SaveFile.ChallengeModeHighScore < GameManager.CurrentScore:
+				SaveManager.SaveFile.ChallengeModeHighScore = GameManager.CurrentScore
 
 func UnlockNextLevel():
 	if GameManager.CurrentLevel < SaveManager.SaveFile.Metadata.size() - 1:

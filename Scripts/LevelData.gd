@@ -2,6 +2,7 @@ extends Resource
 class_name LevelData
 
 @export var CurrentLevel = 0
+@export var ChallengeModeHighScore = 0
 
 @export var Metadata = [
 	{

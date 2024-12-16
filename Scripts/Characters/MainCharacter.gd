@@ -21,7 +21,12 @@ func _physics_process(_delta):
 func Death():
 	print('our hero is dead')
 	AudioManager.PlaySoundEffect(load("res://Audio/SFX/snare.wav"))
-	global_position = start_point.global_position
 	if GameManager.ChallengeMode:
 		print('back to menu')
+		get_tree().change_scene_to_file("res://Scenes/Menus/LevelSelect.tscn")
+		GameManager.CurrentLevel = 0
+		GameManager.CurrentScore = 0
+	elif !GameManager.ChallengeMode:
+		global_position = start_point.global_position
+	
 

@@ -42,3 +42,7 @@ func SetLevelInfo():
 		unlock_image.visible = false
 	
 	level_name_label.text = File.Metadata[GameManager.CurrentLevel]['name']
+
+
+func _on_return_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Menus/MainMenu.tscn")

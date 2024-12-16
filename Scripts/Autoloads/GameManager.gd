@@ -17,6 +17,7 @@ func FormatTime(time):
 
 func PlayNextChallengeLevel():
 	CurrentLevel += 1
+	CurrentScore += 1
 	if CurrentLevel > SaveManager.SaveFile.Metadata.size() - 1: 
 		CurrentLevel = 0
 	get_tree().change_scene_to_file(SaveManager.SaveFile.Metadata[CurrentLevel]['scene'])
