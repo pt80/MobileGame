@@ -9,7 +9,6 @@ func _on_level_select_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/Menus/LevelSelect.tscn")
 
 func _on_challenge_button_pressed():
-	print('begin challenge mode from level 1')
 	GameManager.ChallengeMode = true
 	get_tree().change_scene_to_file(SaveManager.SaveFile.Metadata[0]['scene'])
 

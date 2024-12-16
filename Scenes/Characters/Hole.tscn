@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsiht4v0kcc6e"]
+
+[ext_resource type="Texture2D" uid="uid://ow3plrwyu6sa" path="res://Images/Hole.png" id="1_4cj1f"]
+[ext_resource type="Script" path="res://Scripts/Characters/Hole.gd" id="1_bpgwj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wwdks"]
+radius = 9.0
+
+[node name="Hole" type="Area2D"]
+script = ExtResource("1_bpgwj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wwdks")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_4cj1f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
