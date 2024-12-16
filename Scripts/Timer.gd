@@ -6,5 +6,8 @@ var seconds = 0
 var milliseconds = 0
 
 func _process(delta):
-	time += delta
-	text = GameManager.FormatTime(time)
+	if !GameManager.ChallengeMode:
+		time += delta
+		text = GameManager.FormatTime(time)
+	elif GameManager.ChallengeMode:
+		text = GameManager.Score

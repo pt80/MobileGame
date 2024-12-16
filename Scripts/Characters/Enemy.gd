@@ -11,7 +11,6 @@ func _on_area_2d_body_entered(body):
 	$AudioStreamPlayer2D.stream = load("res://Audio/SFX/hit.wav")
 	$AudioStreamPlayer2D.play()
 	VelocityDirection *= -1
-	print(self, VelocityDirection)
 	if body.name == "MainCharacter":
 		body.Death()
 	

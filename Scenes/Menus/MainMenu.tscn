@@ -44,6 +44,7 @@ text = "Level Select"
 
 [node name="ChallengeButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+disabled = true
 text = "Challenge Mode"
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]

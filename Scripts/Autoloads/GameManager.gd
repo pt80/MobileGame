@@ -1,6 +1,8 @@
 extends Node
 
 var CurrentLevel = 0
+var ChallengeMode = false
+var Score = 0
 
 func _ready():
 	pass # Replace with function body.
