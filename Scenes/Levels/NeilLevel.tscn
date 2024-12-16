@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://ck1acwu03j4ca"]
 
-[ext_resource type="Script" path="res://NeilLevel.gd" id="1_ytnj0"]
+[ext_resource type="Script" path="res://Scripts/NeilLevel.gd" id="1_ytnj0"]
 [ext_resource type="PackedScene" uid="uid://c6og6s6f5eqrn" path="res://Scenes/Overlay.tscn" id="2_mxlvk"]
 [ext_resource type="PackedScene" uid="uid://dtyew16xpmshm" path="res://Scenes/TileMap.tscn" id="2_pj4t5"]
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="3_py15a"]
-[ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/EndPoint.tscn" id="4_7hid3"]
+[ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/Characters/EndPoint.tscn" id="4_7hid3"]
 [ext_resource type="PackedScene" uid="uid://c4srxovnoowrm" path="res://Scenes/Characters/Enemy.tscn" id="4_jktbs"]
 [ext_resource type="PackedScene" uid="uid://bjbs2hjsa78wg" path="res://Scenes/Characters/StretchEnemy.tscn" id="6_x2in8"]
-[ext_resource type="PackedScene" uid="uid://d0ofh62ocevur" path="res://Scenes/StartPoint.tscn" id="8_dv10a"]
+[ext_resource type="PackedScene" uid="uid://d0ofh62ocevur" path="res://Scenes/Characters/StartPoint.tscn" id="8_dv10a"]
 
 [node name="NeilLevel" type="Node2D"]
 script = ExtResource("1_ytnj0")

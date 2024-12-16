@@ -45,3 +45,10 @@ func _on_alert_radius_body_entered(body):
 		Alerted = true
 		SetTimer()
 		Stretch()
+
+
+func _on_alert_radius_area_entered(area):
+	if !Alerted:
+		Alerted = true
+		SetTimer()
+		Stretch()
