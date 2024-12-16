@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://ck1acwu03j4ca"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/NeilLevel.gd" id="1_ytnj0"]
+[ext_resource type="Script" path="res://NeilLevel.gd" id="1_ytnj0"]
 [ext_resource type="PackedScene" uid="uid://c6og6s6f5eqrn" path="res://Scenes/Overlay.tscn" id="2_mxlvk"]
 [ext_resource type="PackedScene" uid="uid://dtyew16xpmshm" path="res://Scenes/TileMap.tscn" id="2_pj4t5"]
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="3_py15a"]

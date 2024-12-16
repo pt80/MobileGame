@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxpb3kh3bka2q"]
+
+[ext_resource type="Texture2D" uid="uid://dbb704vdn6sbb" path="res://Images/MainMenuBackground.png" id="1_7pjva"]
+[ext_resource type="Script" path="res://Scripts/Menus/MainMenu.gd" id="1_ulde8"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ulde8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.67451, 0.666667, 0.67451, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7pjva")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -50.5
+offset_right = 66.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="LevelSelectButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Level Select"
+
+[node name="ChallengeButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Challenge Mode"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[connection signal="pressed" from="VBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ChallengeButton" to="." method="_on_challenge_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]

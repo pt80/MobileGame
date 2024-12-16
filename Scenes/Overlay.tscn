@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="1_7vafv"]
 [ext_resource type="Texture2D" uid="uid://j78yab0gqgtx" path="res://Images/BackArrow.png" id="2_heins"]
-[ext_resource type="Script" path="res://Scenes/LevelNameText.gd" id="2_qbhmv"]
-[ext_resource type="Script" path="res://Scenes/BackButton.gd" id="3_fnmtd"]
+[ext_resource type="Script" path="res://Scripts/LevelNameText.gd" id="2_r7p8g"]
 [ext_resource type="PackedScene" uid="uid://bxxibfs63rraq" path="res://Scenes/timer.tscn" id="3_wtdxo"]
+[ext_resource type="Script" path="res://Scripts/BackButton.gd" id="4_8g2no"]
 [ext_resource type="Script" path="res://Scripts/PBText.gd" id="4_vcdpw"]
 [ext_resource type="Texture2D" uid="uid://3jhhneh55vrw" path="res://Images/MusicNote.png" id="5_nwnc3"]
 [ext_resource type="Script" path="res://Scripts/SoundButton.gd" id="7_824px"]
@@ -27,7 +27,7 @@ texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Neils level.exe"
-script = ExtResource("2_qbhmv")
+script = ExtResource("2_r7p8g")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -37,7 +37,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 2
 texture_normal = ExtResource("2_heins")
-script = ExtResource("3_fnmtd")
+script = ExtResource("4_8g2no")
 
 [node name="Timer" parent="VBoxContainer/HBoxContainer" instance=ExtResource("3_wtdxo")]
 layout_mode = 2

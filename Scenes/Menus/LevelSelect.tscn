@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://rty6a0w0qrh0"]
 
-[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_2ndif"]
-[ext_resource type="Texture2D" uid="uid://dx08o38n7sipq" path="res://Images/background.png" id="2_iqmo2"]
-[ext_resource type="Texture2D" uid="uid://dxf173ejkydvt" path="res://Images/LevelImage.png" id="3_bhcde"]
-[ext_resource type="Texture2D" uid="uid://diiur7b2c5tiy" path="res://Images/Lock.png" id="4_142b3"]
+[ext_resource type="Script" path="res://Scripts/Menus/LevelSelect.gd" id="1_8yv23"]
+[ext_resource type="Texture2D" uid="uid://dx08o38n7sipq" path="res://Images/background.png" id="2_rvmvp"]
+[ext_resource type="Texture2D" uid="uid://dxf173ejkydvt" path="res://Images/LevelImage.png" id="3_nlsst"]
+[ext_resource type="Texture2D" uid="uid://diiur7b2c5tiy" path="res://Images/Lock.png" id="4_6avgc"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_2ndif")
+script = ExtResource("1_8yv23")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_iqmo2")
+texture = ExtResource("2_rvmvp")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -57,7 +57,7 @@ text = "<"
 
 [node name="LevelImage" type="TextureRect" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-texture = ExtResource("3_bhcde")
+texture = ExtResource("3_nlsst")
 
 [node name="UnlockImage" type="TextureRect" parent="VBoxContainer/HBoxContainer2/LevelImage"]
 texture_filter = 1
@@ -73,7 +73,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_142b3")
+texture = ExtResource("4_6avgc")
 
 [node name="NextButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
 layout_mode = 2
