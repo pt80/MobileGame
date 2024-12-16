@@ -4,6 +4,7 @@ var CurrentLevel = 0
 var ChallengeMode = false
 var CurrentScore = 0
 var HighScore = 0
+var SpeedMult = 1
 
 func _ready():
 	pass # Replace with function body.
@@ -19,5 +20,6 @@ func PlayNextChallengeLevel():
 	CurrentLevel += 1
 	CurrentScore += 1
 	if CurrentLevel > SaveManager.SaveFile.Metadata.size() - 1: 
+		SpeedMult *= 1.1
 		CurrentLevel = 0
 	get_tree().change_scene_to_file(SaveManager.SaveFile.Metadata[CurrentLevel]['scene'])
