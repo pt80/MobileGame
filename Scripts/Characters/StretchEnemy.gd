@@ -46,8 +46,7 @@ func _on_alert_radius_body_entered(body):
 		SetTimer()
 		Stretch()
 
-
-func _on_alert_radius_area_entered(area):
+func _on_alert_radius_area_entered(_area):
 	if !Alerted:
 		Alerted = true
 		SetTimer()

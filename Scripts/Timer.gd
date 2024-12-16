@@ -10,4 +10,4 @@ func _process(delta):
 		time += delta
 		text = GameManager.FormatTime(time)
 	elif GameManager.ChallengeMode:
-		text = GameManager.Score
+		text = str(GameManager.CurrentScore)

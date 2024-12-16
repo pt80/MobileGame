@@ -22,5 +22,6 @@ func Death():
 	print('our hero is dead')
 	AudioManager.PlaySoundEffect(load("res://Audio/SFX/snare.wav"))
 	global_position = start_point.global_position
-
+	if GameManager.ChallengeMode:
+		print('back to menu')
 

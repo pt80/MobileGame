@@ -4,15 +4,19 @@ extends Area2D
 
 func _on_body_entered(body):
 	if body.name == "MainCharacter":
-		timer.set_process(false)
-		print(timer.time)
-		print('level complete')
-		UnlockNextLevel()
-		if SaveManager.SaveFile.Metadata[GameManager.CurrentLevel]['high score'] > timer.time:
-			SaveManager.SaveFile.Metadata[GameManager.CurrentLevel]['high score'] = timer.time
-			print('new high score')
-		SaveManager.Save()
-		get_tree().change_scene_to_file("res://Scenes/Menus/LevelSelect.tscn")
+		if !GameManager.ChallengeMode:
+			timer.set_process(false)
+			print(timer.time)
+			print('level complete')
+			UnlockNextLevel()
+			if SaveManager.SaveFile.Metadata[GameManager.CurrentLevel]['high score'] > timer.time:
+				SaveManager.SaveFile.Metadata[GameManager.CurrentLevel]['high score'] = timer.time
+				print('new high score')
+			SaveManager.Save()
+			get_tree().change_scene_to_file("res://Scenes/Menus/LevelSelect.tscn")
+		elif GameManager.ChallengeMode:
+			print('keep going')
+			GameManager.PlayNextChallengeLevel()
 
 func UnlockNextLevel():
 	if GameManager.CurrentLevel < SaveManager.SaveFile.Metadata.size() - 1:
