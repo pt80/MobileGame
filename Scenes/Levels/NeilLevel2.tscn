@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://mkl8kfri3dq1"]
+[gd_scene load_steps=12 format=3 uid="uid://mkl8kfri3dq1"]
 
 [ext_resource type="Script" path="res://Scripts/NeilLevel.gd" id="1_dr2dh"]
 [ext_resource type="PackedScene" uid="uid://c6og6s6f5eqrn" path="res://Scenes/Overlay.tscn" id="2_jm0v5"]
@@ -6,11 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bc523knucw82s" path="res://Images/MobileTileset.png" id="4_4d781"]
 [ext_resource type="Texture2D" uid="uid://ccyssvrlkofb0" path="res://Images/ExtendorEnemy.png" id="5_7ng3f"]
 [ext_resource type="PackedScene" uid="uid://d0ofh62ocevur" path="res://Scenes/Characters/StartPoint.tscn" id="6_4fb7l"]
-[ext_resource type="PackedScene" uid="uid://dsiht4v0kcc6e" path="res://Scenes/Characters/Hole.tscn" id="7_r1f2u"]
 [ext_resource type="PackedScene" uid="uid://dvxpgcsmxdimr" path="res://Scenes/Characters/MainCharacter.tscn" id="8_2rnxw"]
 [ext_resource type="PackedScene" uid="uid://d318g2sxt2j03" path="res://Scenes/Characters/EndPoint.tscn" id="9_c186b"]
-[ext_resource type="PackedScene" uid="uid://c4srxovnoowrm" path="res://Scenes/Characters/Enemy.tscn" id="10_fi8io"]
-[ext_resource type="PackedScene" uid="uid://bjbs2hjsa78wg" path="res://Scenes/Characters/StretchEnemy.tscn" id="11_c4m2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ndot"]
 texture = ExtResource("4_4d781")
@@ -70,29 +67,8 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0
 [node name="StartPoint" parent="TileMap" instance=ExtResource("6_4fb7l")]
 position = Vector2(194, 513)
 
-[node name="Hole" parent="TileMap" instance=ExtResource("7_r1f2u")]
-visible = false
-position = Vector2(159, 70)
-
 [node name="MainCharacter" parent="TileMap" instance=ExtResource("8_2rnxw")]
 position = Vector2(200, 515)
 
 [node name="EndPoint" parent="TileMap" instance=ExtResource("9_c186b")]
 position = Vector2(262, 26)
-
-[node name="Enemy2" parent="TileMap" instance=ExtResource("10_fi8io")]
-visible = false
-position = Vector2(30, 132)
-
-[node name="Enemy" parent="TileMap" instance=ExtResource("10_fi8io")]
-visible = false
-position = Vector2(240, 132)
-
-[node name="StretchEnemy" parent="TileMap" instance=ExtResource("11_c4m2f")]
-visible = false
-position = Vector2(199, 72)
-StretchHorizontal = false
-
-[node name="StretchEnemy2" parent="TileMap" instance=ExtResource("11_c4m2f")]
-visible = false
-position = Vector2(128, 71)
