@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxpb3kh3bka2q"]
+[gd_scene load_steps=4 format=3 uid="uid://bxpb3kh3bka2q"]
 
 [ext_resource type="Texture2D" uid="uid://dbb704vdn6sbb" path="res://Images/MainMenuBackground.png" id="1_7pjva"]
 [ext_resource type="Script" path="res://Scripts/Menus/MainMenu.gd" id="1_ulde8"]
+[ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="3_w3umy"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -13,7 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_ulde8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-self_modulate = Color(0.67451, 0.666667, 0.67451, 1)
+self_modulate = Color(0.745098, 0.745098, 0.745098, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,15 +41,18 @@ theme_override_constants/separation = 30
 
 [node name="LevelSelectButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_w3umy")
 text = "Level Select"
 
 [node name="ChallengeButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_w3umy")
 disabled = true
 text = "Challenge Mode"
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_w3umy")
 text = "Settings"
 
 [connection signal="pressed" from="VBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]

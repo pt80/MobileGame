@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dwmpeuwpobkrg"
+path="res://.godot/imported/Windows Regular.ttf-2d966803697676aa2d3a8e5d508d9643.fontdata"
+
+[deps]
+
+source_file="res://Resources/Windows Regular.ttf"
+dest_files=["res://.godot/imported/Windows Regular.ttf-2d966803697676aa2d3a8e5d508d9643.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

@@ -23,9 +23,10 @@ func Death():
 	AudioManager.PlaySoundEffect(load("res://Audio/SFX/snare.wav"))
 	if GameManager.ChallengeMode:
 		print('back to menu')
-		get_tree().change_scene_to_file("res://Scenes/Menus/LevelSelect.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Menus/MainMenu.tscn")
 		GameManager.CurrentLevel = 0
 		GameManager.CurrentScore = 0
+		GameManager.ChallengeMode = false
 	elif !GameManager.ChallengeMode:
 		global_position = start_point.global_position
 	
