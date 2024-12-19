@@ -57,14 +57,13 @@ texture_normal = ExtResource("5_nwnc3")
 script = ExtResource("7_824px")
 
 [node name="VolumeSlider" type="HSlider" parent="VBoxContainer/HBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_vertical = 4
+theme = ExtResource("1_7vafv")
 max_value = 1.0
 step = 0.001
 value = 1.0
-tick_count = 1
 script = ExtResource("8_8yp7h")
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/BackButton" to="VBoxContainer/HBoxContainer/BackButton" method="_on_pressed"]

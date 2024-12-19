@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddnkog6i4ijp2"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/SegmentedVolume.gd" id="1_lsk2j"]
+[ext_resource type="Texture2D" uid="uid://dui4qvx2wqygu" path="res://Images/VolumeBar.png" id="2_iaajv"]
+
+[node name="VolumeContainer" type="HBoxContainer"]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_lsk2j")
+
+[node name="Volume1" type="TextureButton" parent="." groups=["VolumeBar"]]
+self_modulate = Color(0, 0, 0.498039, 1)
+layout_mode = 2
+texture_normal = ExtResource("2_iaajv")
+
+[node name="Volume2" type="TextureButton" parent="." groups=["VolumeBar"]]
+self_modulate = Color(0, 0, 0.498039, 1)
+layout_mode = 2
+texture_normal = ExtResource("2_iaajv")
+
+[node name="Volume3" type="TextureButton" parent="." groups=["VolumeBar"]]
+self_modulate = Color(0, 0, 0.498039, 1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_iaajv")
+
+[node name="Volume4" type="TextureButton" parent="." groups=["VolumeBar"]]
+self_modulate = Color(0, 0, 0.498039, 1)
+layout_mode = 2
+texture_normal = ExtResource("2_iaajv")
+
+[node name="Volume5" type="TextureButton" parent="." groups=["VolumeBar"]]
+self_modulate = Color(0, 0, 0.498039, 1)
+layout_mode = 2
+texture_normal = ExtResource("2_iaajv")
+
+[connection signal="pressed" from="Volume1" to="." method="_on_volume_1_pressed"]
+[connection signal="pressed" from="Volume2" to="." method="_on_volume_2_pressed"]
+[connection signal="pressed" from="Volume3" to="." method="_on_volume_3_pressed"]
+[connection signal="pressed" from="Volume4" to="." method="_on_volume_4_pressed"]
+[connection signal="pressed" from="Volume5" to="." method="_on_volume_5_pressed"]

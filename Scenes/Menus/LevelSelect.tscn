@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dxf173ejkydvt" path="res://Images/LevelImage.png" id="3_nlsst"]
 [ext_resource type="Texture2D" uid="uid://diiur7b2c5tiy" path="res://Images/Lock.png" id="4_6avgc"]
 
-[node name="Control" type="Control"]
+[node name="LevelSelect" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -92,15 +92,6 @@ alignment = 1
 layout_mode = 2
 text = "Play"
 
-[node name="return" type="Button" parent="."]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 22.0
-offset_right = 66.0
-offset_bottom = 53.0
-text = "back"
-
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/PreviousButton" to="." method="_on_previous_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer3/PlayButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="return" to="." method="_on_return_pressed"]

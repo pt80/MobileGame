@@ -4,6 +4,7 @@ extends Control
 @onready var level_name_label = $VBoxContainer/HBoxContainer/LevelNameLabel
 @onready var unlock_image = $VBoxContainer/HBoxContainer2/LevelImage/UnlockImage
 @onready var high_score_text = $VBoxContainer/HBoxContainer4/HighScoreText
+@onready var overlay = $Overlay/VBoxContainer/HBoxContainer
 
 var File 
 
@@ -11,6 +12,7 @@ func _ready():
 	File = SaveManager.SaveFile
 	AudioManager.PlayMusic(load("res://Audio/Music/MenuSongTest.wav"))
 	SetLevelInfo()
+	AdjustOverlay()
 	
 func _on_button_pressed():
 	if File.Metadata[GameManager.CurrentLevel]['unlocked']:
@@ -43,6 +45,7 @@ func SetLevelInfo():
 	
 	level_name_label.text = File.Metadata[GameManager.CurrentLevel]['name']
 
-
-func _on_return_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Menus/MainMenu.tscn")
+func AdjustOverlay():
+	overlay.get_child(1).visible = false
+	overlay.get_child(2).visible = false
+	print('overlay adjusted')
