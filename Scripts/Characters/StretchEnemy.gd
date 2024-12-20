@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 @export var Rate: float = 1.0
-@export var Length: int = 4
+@export var Length: int = 5
 @export var StretchHorizontal: bool = true
 @export var StretchVertical: bool = true
-@export var Alerted: bool = false
+@export var Alerted: bool = true
 
 @onready var timer = $Timer
 

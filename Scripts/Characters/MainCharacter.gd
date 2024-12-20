@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 200.0
 @onready var start_point = $"../StartPoint"
 
 func _physics_process(_delta):

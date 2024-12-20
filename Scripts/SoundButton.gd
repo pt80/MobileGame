@@ -1,7 +1,6 @@
 extends TextureButton
 
 const UI = preload("res://Resources/UITheme.tres")
-@onready var volume_slider = $"../VolumeSlider"
 @onready var volume_container = $"../VolumeContainer"
 
 

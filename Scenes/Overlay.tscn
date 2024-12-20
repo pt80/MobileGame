@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6og6s6f5eqrn"]
+[gd_scene load_steps=10 format=3 uid="uid://c6og6s6f5eqrn"]
 
 [ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="1_7vafv"]
 [ext_resource type="Texture2D" uid="uid://j78yab0gqgtx" path="res://Images/BackArrow.png" id="2_heins"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" path="res://Scripts/PBText.gd" id="4_vcdpw"]
 [ext_resource type="Texture2D" uid="uid://3jhhneh55vrw" path="res://Images/MusicNote.png" id="5_nwnc3"]
 [ext_resource type="Script" path="res://Scripts/SoundButton.gd" id="7_824px"]
-[ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="8_8yp7h"]
 [ext_resource type="PackedScene" uid="uid://ddnkog6i4ijp2" path="res://Scenes/Menus/SegmentedVolume.tscn" id="9_tcod1"]
 
 [node name="Overlay" type="PanelContainer"]
@@ -24,7 +23,6 @@ theme = ExtResource("1_7vafv")
 layout_mode = 2
 
 [node name="LevelNameText" type="Label" parent="VBoxContainer"]
-texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Neils level.exe"
@@ -60,17 +58,5 @@ script = ExtResource("7_824px")
 [node name="VolumeContainer" parent="VBoxContainer/HBoxContainer" instance=ExtResource("9_tcod1")]
 layout_mode = 2
 
-[node name="VolumeSlider" type="HSlider" parent="VBoxContainer/HBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-size_flags_vertical = 4
-theme = ExtResource("1_7vafv")
-max_value = 1.0
-step = 0.001
-value = 1.0
-script = ExtResource("8_8yp7h")
-
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/BackButton" to="VBoxContainer/HBoxContainer/BackButton" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Sound" to="VBoxContainer/HBoxContainer/Sound" method="_on_pressed"]
-[connection signal="drag_ended" from="VBoxContainer/HBoxContainer/VolumeSlider" to="VBoxContainer/HBoxContainer/VolumeSlider" method="_on_drag_ended"]
