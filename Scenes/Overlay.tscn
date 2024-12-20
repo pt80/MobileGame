@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6og6s6f5eqrn"]
+[gd_scene load_steps=11 format=3 uid="uid://c6og6s6f5eqrn"]
 
 [ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="1_7vafv"]
 [ext_resource type="Texture2D" uid="uid://j78yab0gqgtx" path="res://Images/BackArrow.png" id="2_heins"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://3jhhneh55vrw" path="res://Images/MusicNote.png" id="5_nwnc3"]
 [ext_resource type="Script" path="res://Scripts/SoundButton.gd" id="7_824px"]
 [ext_resource type="Script" path="res://Scripts/VolumeSlider.gd" id="8_8yp7h"]
+[ext_resource type="PackedScene" uid="uid://ddnkog6i4ijp2" path="res://Scenes/Menus/SegmentedVolume.tscn" id="9_tcod1"]
 
 [node name="Overlay" type="PanelContainer"]
 texture_filter = 1
@@ -56,7 +57,11 @@ size_flags_horizontal = 10
 texture_normal = ExtResource("5_nwnc3")
 script = ExtResource("7_824px")
 
+[node name="VolumeContainer" parent="VBoxContainer/HBoxContainer" instance=ExtResource("9_tcod1")]
+layout_mode = 2
+
 [node name="VolumeSlider" type="HSlider" parent="VBoxContainer/HBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_vertical = 4

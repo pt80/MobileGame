@@ -1,34 +1,41 @@
 extends HBoxContainer
 
 var volumeBars 
+@onready var sound = $"../Sound"
 
 func _ready():
 	volumeBars = get_tree().get_nodes_in_group('VolumeBar')
-	print(volumeBars)
-	for i in volumeBars:
-		print(volumeBars.find(i))
+	ChangeVolume(snappedf(db_to_linear(AudioServer.get_bus_volume_db(0)), 0.1) * float(volumeBars.size()) - 1)
 
+func ChangeVolume(vol):
+	AudioServer.set_bus_volume_db(0,linear_to_db(float(vol + 1)/float(volumeBars.size())))
+	ChangeVolumeImage(vol)
+	if AudioServer.is_bus_mute(0):
+		Mute()
+	
 func ChangeVolumeImage(vol):
-	AudioServer.set_bus_volume_db(0,linear_to_db(vol/volumeBars.size()))
-
 	for i in volumeBars:
 		if volumeBars.find(i) > vol:
-			print(i.self_modulate)
-			i.self_modulate = Color(.75,.75,.75,1)
+			i.self_modulate = Color(.85,.85,.85,1)
 		elif volumeBars.find(i) <= vol:
 			i.self_modulate = Color(0,0,.498,1)
 
+func Mute():
+	sound.texture_normal = load("res://Images/MusicNoteMuted.png")
+	for i in volumeBars:
+		i.self_modulate = Color(.85,.85,.85,1)
+
 func _on_volume_1_pressed():
-	ChangeVolumeImage(0)
+	ChangeVolume(0)
 
 func _on_volume_2_pressed():
-	ChangeVolumeImage(1)
+	ChangeVolume(1)
 
 func _on_volume_3_pressed():
-	ChangeVolumeImage(2)
+	ChangeVolume(2)
 
 func _on_volume_4_pressed():
-	ChangeVolumeImage(3)
+	ChangeVolume(3)
 
 func _on_volume_5_pressed():
-	ChangeVolumeImage(4)
+	ChangeVolume(4)
