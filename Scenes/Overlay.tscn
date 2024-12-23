@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c6og6s6f5eqrn"]
+[gd_scene load_steps=14 format=3 uid="uid://c6og6s6f5eqrn"]
 
 [ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="1_7vafv"]
 [ext_resource type="Texture2D" uid="uid://j78yab0gqgtx" path="res://Images/BackArrow.png" id="2_heins"]
@@ -17,15 +17,8 @@
 [sub_resource type="Theme" id="Theme_ijls8"]
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_j6mg7")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyulb"]
-bg_color = Color(0.498039, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_0oilc"]
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_cyulb")
-
 [node name="Overlay" type="PanelContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(307.625, 600)
 offset_right = 374.0
 offset_bottom = 600.0
 size_flags_horizontal = 0
@@ -34,10 +27,13 @@ theme = ExtResource("1_7vafv")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 self_modulate = Color(0.752941, 0.752941, 0.752941, 1)
+custom_minimum_size = Vector2(0, 616)
 layout_mode = 2
 texture = ExtResource("2_wyuae")
+expand_mode = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(380, 0)
 layout_mode = 2
 theme_override_constants/separation = 1
 
@@ -48,7 +44,6 @@ theme = SubResource("Theme_ijls8")
 
 [node name="LevelNameText" type="Label" parent="VBoxContainer/PanelContainer"]
 layout_mode = 2
-theme = SubResource("Theme_0oilc")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Neils level.exe"
 script = ExtResource("2_r7p8g")

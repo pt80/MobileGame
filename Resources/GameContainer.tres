@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://col7vvi13kpn4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_togr8"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.239216, 0.239216, 0.239216, 1)
+border_blend = true
+corner_detail = 1
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_togr8")
