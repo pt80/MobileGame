@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://bkof0vlm6rvoq"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://bkof0vlm6rvoq"]
 
 [ext_resource type="FontFile" uid="uid://dwmpeuwpobkrg" path="res://Resources/Windows Regular.ttf" id="1_lsrma"]
 [ext_resource type="Texture2D" uid="uid://dx08o38n7sipq" path="res://Images/background.png" id="1_rkjxq"]
@@ -24,6 +24,13 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jnty3"]
+bg_color = Color(1, 0.188235, 0.752941, 1)
+skew = Vector2(0.185, 0)
+border_width_left = 3
+border_width_top = 4
+border_width_right = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5vlb"]
 bg_color = Color(0.988235, 0, 0.905882, 1)
@@ -51,6 +58,7 @@ Button/fonts/font = ExtResource("1_lsrma")
 Button/styles/disabled = SubResource("StyleBoxFlat_n5wx8")
 Button/styles/hover = SubResource("StyleBoxFlat_mkuu2")
 Button/styles/normal = SubResource("StyleBoxFlat_qt5dw")
+HBoxContainer/styles/tset = SubResource("StyleBoxFlat_jnty3")
 HSlider/icons/tick = ExtResource("2_22xow")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_p5vlb")
 HSlider/styles/slider = SubResource("StyleBoxFlat_bsqwm")

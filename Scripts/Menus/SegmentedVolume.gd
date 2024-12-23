@@ -1,4 +1,4 @@
-extends HBoxContainer
+extends PanelContainer
 
 var volumeBars 
 @onready var sound = $"../Sound"
