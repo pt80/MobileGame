@@ -16,4 +16,5 @@ script = ExtResource("1_xhmj6")
 texture = ExtResource("2_1xhgf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
 shape = SubResource("CircleShape2D_t74o6")

@@ -32,5 +32,54 @@ class_name LevelData
 		'image': "res://Images/MainMenuBackground.png",
 		'high score': 9999,
 		'unlocked': false
+	},
+	{
+		'name': "NeilLevel4",
+		'scene': "res://Scenes/Levels/NeilLevel4.tscn",
+		'image': "res://Images/MainMenuBackground.png",
+		'high score': 9999,
+		'unlocked': false
+	},
+	{
+		'name': "NeilLevel5",
+		'scene': "res://Scenes/Levels/NeilLevel5.tscn",
+		'image': "res://Images/MainMenuBackground.png",
+		'high score': 9999,
+		'unlocked': false
+	},
+	{
+		'name': "NeilLevel6",
+		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
+		'image': "res://Images/MainMenuBackground.png",
+		'high score': 9999,
+		'unlocked': false
+	},
+	{
+		'name': "NeilLevel7",
+		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
+		'image': "res://Images/MainMenuBackground.png",
+		'high score': 9999,
+		'unlocked': false
+	},
+	{
+		'name': "NeilLevel8",
+		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
+		'image': "res://Images/MainMenuBackground.png",
+		'high score': 9999,
+		'unlocked': false
+	},
+	{
+		'name': "NeilLevel9",
+		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
+		'image': "res://Images/MainMenuBackground.png",
+		'high score': 9999,
+		'unlocked': false
+	},
+	{
+		'name': "NeilLevel10",
+		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
+		'image': "res://Images/MainMenuBackground.png",
+		'high score': 9999,
+		'unlocked': false
 	}
 ]
