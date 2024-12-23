@@ -6,79 +6,42 @@ class_name LevelData
 
 @export var Metadata = [
 	{
-		'name': "DakotaLevel",
-		'scene': "res://Scenes/Levels/DakotaLevel.tscn",
+		'name': "Maze",
+		'scene': "res://Scenes/Levels/Finals/NeilLevel2.tscn",
 		'image': "res://Images/LevelImage.png",
+		'holes': [],
 		'high score': 9999,
 		'unlocked': true
 	},
 	{
-		'name': "NeilLevel",
-		'scene': "res://Scenes/Levels/NeilLevel.tscn",
+		'name': "Boxes",
+		'scene': "res://Scenes/Levels/Finals/NeilLevel8.tscn",
 		'image': "res://Images/MainMenuBackground.png",
+		'holes': [Vector2i(0,0)],
 		'high score': 9999,
 		'unlocked': false
 	},
 	{
-		'name': "NeilLevel2",
-		'scene': "res://Scenes/Levels/NeilLevel2.tscn",
+		'name': "Alleys",
+		'scene': "res://Scenes/Levels/Finals/NeilLevel6.tscn",
 		'image': "res://Images/MainMenuBackground.png",
+		'holes': [Vector2i(0,0)],
 		'high score': 9999,
 		'unlocked': false
 	},
 	{
-		'name': "NeilLevel3",
-		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
+		'name': "Vortex",
+		'scene': "res://Scenes/Levels/Finals/NeilLevel7.tscn",
 		'image': "res://Images/MainMenuBackground.png",
+		'holes': [Vector2i(0,0)],
 		'high score': 9999,
 		'unlocked': false
 	},
 	{
-		'name': "NeilLevel4",
+		'name': "Jumper",
 		'scene': "res://Scenes/Levels/NeilLevel4.tscn",
 		'image': "res://Images/MainMenuBackground.png",
-		'high score': 9999,
-		'unlocked': false
-	},
-	{
-		'name': "NeilLevel5",
-		'scene': "res://Scenes/Levels/NeilLevel5.tscn",
-		'image': "res://Images/MainMenuBackground.png",
-		'high score': 9999,
-		'unlocked': false
-	},
-	{
-		'name': "NeilLevel6",
-		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
-		'image': "res://Images/MainMenuBackground.png",
-		'high score': 9999,
-		'unlocked': false
-	},
-	{
-		'name': "NeilLevel7",
-		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
-		'image': "res://Images/MainMenuBackground.png",
-		'high score': 9999,
-		'unlocked': false
-	},
-	{
-		'name': "NeilLevel8",
-		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
-		'image': "res://Images/MainMenuBackground.png",
-		'high score': 9999,
-		'unlocked': false
-	},
-	{
-		'name': "NeilLevel9",
-		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
-		'image': "res://Images/MainMenuBackground.png",
-		'high score': 9999,
-		'unlocked': false
-	},
-	{
-		'name': "NeilLevel10",
-		'scene': "res://Scenes/Levels/NeilLevel3.tscn",
-		'image': "res://Images/MainMenuBackground.png",
+		'holes': [Vector2i(0,0)],
 		'high score': 9999,
 		'unlocked': false
 	}
