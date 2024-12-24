@@ -14,9 +14,15 @@ func _on_challenge_button_pressed():
 
 func _on_settings_button_pressed():
 	print('llok at the optrions')
+	
+func _on_exit_button_pressed():
+	get_tree().quit()
 
 func ChallengeUnlock():
 	if SaveManager.SaveFile.Metadata[-1]['unlocked']:
 		$VBoxContainer/ChallengeButton.disabled = false
 	else:
 		$VBoxContainer/ChallengeButton.disabled = true
+
+
+
