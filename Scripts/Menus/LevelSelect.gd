@@ -9,7 +9,6 @@ extends Control
 var File 
 
 func _ready():
-	print(overlay.get_children())
 	File = SaveManager.SaveFile
 	AudioManager.PlayMusic(load("res://Audio/Music/MenuSongTest.wav"))
 	#SetLevelInfo()

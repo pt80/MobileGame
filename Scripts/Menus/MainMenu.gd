@@ -10,6 +10,7 @@ func _on_level_select_button_pressed():
 
 func _on_challenge_button_pressed():
 	GameManager.ChallengeMode = true
+	GameManager.CurrentLevel = 0
 	get_tree().change_scene_to_file(SaveManager.SaveFile.Metadata[0]['scene'])
 
 func _on_settings_button_pressed():
