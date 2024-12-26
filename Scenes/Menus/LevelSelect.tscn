@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://rty6a0w0qrh0"]
+[gd_scene load_steps=6 format=3 uid="uid://rty6a0w0qrh0"]
 
 [ext_resource type="Script" path="res://Scripts/Menus/LevelSelect.gd" id="1_8yv23"]
 [ext_resource type="PackedScene" uid="uid://c6og6s6f5eqrn" path="res://Scenes/Overlay.tscn" id="2_eccf3"]
 [ext_resource type="Texture2D" uid="uid://dxf173ejkydvt" path="res://Images/LevelImage.png" id="3_nlsst"]
+[ext_resource type="PackedScene" uid="uid://d3bug1vt3rkra" path="res://Scenes/Menus/LevelList.tscn" id="3_s3jt1"]
 [ext_resource type="Texture2D" uid="uid://diiur7b2c5tiy" path="res://Images/Lock.png" id="4_6avgc"]
 
 [node name="LevelSelect" type="Control"]
@@ -17,7 +18,20 @@ script = ExtResource("1_8yv23")
 [node name="Overlay" parent="." instance=ExtResource("2_eccf3")]
 layout_mode = 0
 
+[node name="Control" parent="." instance=ExtResource("3_s3jt1")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -180.0
+offset_right = 169.0
+offset_bottom = 180.0
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
