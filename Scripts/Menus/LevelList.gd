@@ -46,3 +46,53 @@ func _on_level_5_play_button_pressed():
 	GameManager.CurrentLevel = 4
 	if File.Metadata[GameManager.CurrentLevel]['unlocked']:
 		print('wooah that was a LEVEL')
+
+func _on_level_1_mouse_entered():
+	$VBoxContainer/Level1.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
+	$VBoxContainer/Level1/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
+	$VBoxContainer/Level1/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
+
+func _on_level_1_mouse_exited():
+	$VBoxContainer/Level1.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
+	$VBoxContainer/Level1/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
+	$VBoxContainer/Level1/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
+
+func _on_level_2_mouse_entered():
+	$VBoxContainer/Level2.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
+	$VBoxContainer/Level2/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
+	$VBoxContainer/Level2/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
+
+func _on_level_2_mouse_exited():
+	$VBoxContainer/Level2.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
+	$VBoxContainer/Level2/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
+	$VBoxContainer/Level2/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
+
+func _on_level_3_mouse_entered():
+	$VBoxContainer/Level3.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
+	$VBoxContainer/Level3/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
+	$VBoxContainer/Level3/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
+
+func _on_level_3_mouse_exited():
+	$VBoxContainer/Level3.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
+	$VBoxContainer/Level3/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
+	$VBoxContainer/Level3/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
+
+func _on_level_4_mouse_entered():
+	$VBoxContainer/Level4.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
+	$VBoxContainer/Level4/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
+	$VBoxContainer/Level4/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
+
+func _on_level_4_mouse_exited():
+	$VBoxContainer/Level4.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
+	$VBoxContainer/Level4/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
+	$VBoxContainer/Level4/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
+
+func _on_level_5_mouse_entered():
+	$VBoxContainer/Level5.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
+	$VBoxContainer/Level5/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
+	$VBoxContainer/Level5/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
+	
+func _on_level_5_mouse_exited():
+	$VBoxContainer/Level5.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
+	$VBoxContainer/Level5/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
+	$VBoxContainer/Level5/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
