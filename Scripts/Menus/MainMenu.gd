@@ -2,7 +2,7 @@ extends Control
 
 
 func _ready():
-	AudioManager.PlayMusic(load("res://Audio/Music/MenuSongTest.wav"))
+	AudioManager.PlayMusic(load("res://Audio/Music/NewMenu.wav"))
 	ChallengeUnlock()
 
 func _on_level_select_button_pressed():

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxpb3kh3bka2q"]
+[gd_scene load_steps=6 format=3 uid="uid://bxpb3kh3bka2q"]
 
 [ext_resource type="Texture2D" uid="uid://dbb704vdn6sbb" path="res://Images/MainMenuBackground.png" id="1_7pjva"]
 [ext_resource type="Script" path="res://Scripts/Menus/MainMenu.gd" id="1_ulde8"]
 [ext_resource type="Theme" uid="uid://bkof0vlm6rvoq" path="res://Resources/UITheme.tres" id="3_w3umy"]
 [ext_resource type="Texture2D" uid="uid://dyy3st76rm7ku" path="res://Images/TitleDeconstructed.png" id="4_ra2fs"]
+[ext_resource type="FontFile" uid="uid://dwmpeuwpobkrg" path="res://Resources/Windows Regular.ttf" id="5_dioy3"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -54,6 +55,7 @@ disabled = true
 text = "Challenge Mode"
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
+visible = false
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("3_w3umy")
@@ -67,6 +69,7 @@ text = "Exit
 "
 
 [node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
@@ -74,6 +77,37 @@ anchor_right = 1.0
 offset_bottom = 180.0
 grow_horizontal = 2
 texture = ExtResource("4_ra2fs")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -113.0
+offset_top = 6.0
+offset_right = 163.0
+offset_bottom = 241.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_dioy3")
+theme_override_font_sizes/font_size = 84
+text = "  Quick
+Levels"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -146.0
+offset_top = -1.0
+offset_right = 130.0
+offset_bottom = 234.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.960784, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_dioy3")
+theme_override_font_sizes/font_size = 96
+text = "5 "
 
 [connection signal="pressed" from="VBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ChallengeButton" to="." method="_on_challenge_button_pressed"]

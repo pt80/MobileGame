@@ -1,15 +1,12 @@
 extends Area2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+@export_range(-1, 1, 1) var Direction: float
 
 
 func _on_body_entered(body):
 	print(body.position, body.global_position)
 	if body.name == "MainCharacter":
-		body.position += Vector2(-24,0)
+		body.position += Vector2(Direction * 36,0)
 
 #
 #func _on_area_entered(area):
