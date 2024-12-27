@@ -48,6 +48,8 @@ func _on_level_5_play_button_pressed():
 		print('wooah that was a LEVEL')
 
 func _on_level_1_mouse_entered():
+	if !$VBoxContainer/Level1/HBoxContainer/Level1PlayButton/UnlockImage.visible:
+		$VBoxContainer/Level1/HBoxContainer/Level1PlayButton/PlayImage.visible = true
 	$VBoxContainer/Level1.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
 	$VBoxContainer/Level1/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
 	$VBoxContainer/Level1/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
@@ -56,8 +58,11 @@ func _on_level_1_mouse_exited():
 	$VBoxContainer/Level1.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
 	$VBoxContainer/Level1/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
 	$VBoxContainer/Level1/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
-
+	$VBoxContainer/Level1/HBoxContainer/Level1PlayButton/PlayImage.visible = false
+	
 func _on_level_2_mouse_entered():
+	if !$VBoxContainer/Level2/HBoxContainer/Level2PlayButton/UnlockImage.visible:
+		$VBoxContainer/Level2/HBoxContainer/Level2PlayButton/PlayImage.visible = true
 	$VBoxContainer/Level2.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
 	$VBoxContainer/Level2/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
 	$VBoxContainer/Level2/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
@@ -66,8 +71,11 @@ func _on_level_2_mouse_exited():
 	$VBoxContainer/Level2.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
 	$VBoxContainer/Level2/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
 	$VBoxContainer/Level2/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
-
+	$VBoxContainer/Level2/HBoxContainer/Level2PlayButton/PlayImage.visible = false
+	
 func _on_level_3_mouse_entered():
+	if !$VBoxContainer/Level3/HBoxContainer/Level3PlayButton/UnlockImage.visible:
+		$VBoxContainer/Level3/HBoxContainer/Level3PlayButton/PlayImage.visible = true
 	$VBoxContainer/Level3.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
 	$VBoxContainer/Level3/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
 	$VBoxContainer/Level3/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
@@ -76,8 +84,11 @@ func _on_level_3_mouse_exited():
 	$VBoxContainer/Level3.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
 	$VBoxContainer/Level3/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
 	$VBoxContainer/Level3/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
+	$VBoxContainer/Level3/HBoxContainer/Level3PlayButton/PlayImage.visible = false
 
 func _on_level_4_mouse_entered():
+	if !$VBoxContainer/Level4/HBoxContainer/Level4PlayButton/UnlockImage.visible:
+		$VBoxContainer/Level4/HBoxContainer/Level4PlayButton/PlayImage.visible = true
 	$VBoxContainer/Level4.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
 	$VBoxContainer/Level4/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
 	$VBoxContainer/Level4/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
@@ -86,8 +97,11 @@ func _on_level_4_mouse_exited():
 	$VBoxContainer/Level4.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
 	$VBoxContainer/Level4/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
 	$VBoxContainer/Level4/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
+	$VBoxContainer/Level4/HBoxContainer/Level4PlayButton/PlayImage.visible = false
 
 func _on_level_5_mouse_entered():
+	if !$VBoxContainer/Level5/HBoxContainer/Level5PlayButton/UnlockImage.visible:
+		$VBoxContainer/Level5/HBoxContainer/Level5PlayButton/PlayImage.visible = true
 	$VBoxContainer/Level5.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,1)
 	$VBoxContainer/Level5/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(1,1,1,1))
 	$VBoxContainer/Level5/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(1,1,1,1))
@@ -96,3 +110,4 @@ func _on_level_5_mouse_exited():
 	$VBoxContainer/Level5.theme.get_stylebox('panel', 'PanelContainer').bg_color = Color(0,0,.5,0)
 	$VBoxContainer/Level5/HBoxContainer/VBoxContainer/Label.set("theme_override_colors/font_color",Color(0,0,0,1))
 	$VBoxContainer/Level5/HBoxContainer/VBoxContainer/Label2.set("theme_override_colors/font_color",Color(0,0,0,1))
+	$VBoxContainer/Level5/HBoxContainer/Level5PlayButton/PlayImage.visible = false
