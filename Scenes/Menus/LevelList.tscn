@@ -1,7 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://d3bug1vt3rkra"]
 
 [ext_resource type="Theme" uid="uid://col7vvi13kpn4" path="res://Resources/GameContainer.tres" id="1_hmgpe"]
-[ext_resource type="Texture2D" uid="uid://cj1e5hif5hdxh" path="res://Images/SunkBackground.png" id="2_1f3xj"]
 [ext_resource type="Script" path="res://Scripts/Menus/LevelList.gd" id="2_opgho"]
 [ext_resource type="Texture2D" uid="uid://y6kg58btlryr" path="res://Images/Maze.png" id="3_e6fcf"]
 [ext_resource type="Theme" uid="uid://c03f16fewcyi5" path="res://Resources/Blue.tres" id="3_rduvr"]
@@ -11,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b5r7gp30plb00" path="res://Images/Boxes.png" id="6_mb1nc"]
 [ext_resource type="Texture2D" uid="uid://bgfg3av3gci6d" path="res://Images/Alleys.png" id="7_mt43e"]
 [ext_resource type="Texture2D" uid="uid://be75db0bm7gu5" path="res://Images/play.png" id="7_r10gx"]
+[ext_resource type="Texture2D" uid="uid://cjl855x666amf" path="res://Images/Cage.png" id="11_tcneo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ykpx8"]
 bg_color = Color(0, 0, 0.498039, 0)
@@ -342,7 +342,7 @@ theme_override_constants/separation = 8
 
 [node name="Level5PlayButton" type="TextureButton" parent="VBoxContainer/Level5/HBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("2_1f3xj")
+texture_normal = ExtResource("11_tcneo")
 
 [node name="UnlockImage" type="TextureRect" parent="VBoxContainer/Level5/HBoxContainer/Level5PlayButton"]
 texture_filter = 1

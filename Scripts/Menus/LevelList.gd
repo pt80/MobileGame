@@ -45,7 +45,7 @@ func _on_level_4_play_button_pressed():
 func _on_level_5_play_button_pressed():
 	GameManager.CurrentLevel = 4
 	if File.Metadata[GameManager.CurrentLevel]['unlocked']:
-		print('wooah that was a LEVEL')
+		get_tree().change_scene_to_file("res://Scenes/Levels/Finals/Jumper.tscn")
 
 func _on_level_1_mouse_entered():
 	if !$VBoxContainer/Level1/HBoxContainer/Level1PlayButton/UnlockImage.visible:

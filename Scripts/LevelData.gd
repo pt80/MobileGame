@@ -39,9 +39,9 @@ class_name LevelData
 	},
 	{
 		'name': "Jumper",
-		'scene': "res://Scenes/Levels/Jumper.tscn",
+		'scene': "res://Scenes/Levels/Finals/Cage.tscn",
 		'image': "res://Images/MainMenuBackground.png",
-		'holes': [Vector2i(0,0)],
+		'holes': [Vector2i(21,30),Vector2i(15,4),Vector2i(16,8),Vector2i(13,27),Vector2i(21,30)],
 		'high score': 9999,
 		'unlocked': true
 	}

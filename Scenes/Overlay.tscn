@@ -20,8 +20,8 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_j38dx")
 
 [node name="Overlay" type="PanelContainer"]
 texture_filter = 1
-offset_right = 374.0
-offset_bottom = 600.0
+offset_right = 384.0
+offset_bottom = 616.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource("1_7vafv")

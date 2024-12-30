@@ -4,7 +4,6 @@ extends Area2D
 
 
 func _on_body_entered(body):
-	print(body.position, body.global_position)
 	if body.name == "MainCharacter":
 		body.position += Vector2(Direction * 36,0)
 

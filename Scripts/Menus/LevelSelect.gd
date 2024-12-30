@@ -10,7 +10,7 @@ var File
 
 func _ready():
 	File = SaveManager.SaveFile
-	AudioManager.PlayMusic(load("res://Audio/Music/MenuSongTest.wav"))
+	AudioManager.PlayMusic(load("res://Audio/Music/NewMenu.wav"))
 	#SetLevelInfo()
 	AdjustOverlay()
 	#
